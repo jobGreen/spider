@@ -1,0 +1,31 @@
+#log
+logging:
+  config: classpath:logback-dev.xml
+  
+#service port
+server:
+  port: 8080
+
+#datasource
+
+  
+      
+#kafka topic
+
+  kafka: 
+    consumer: 
+      group-id: myAcquisitionGroup
+    bootstrap-servers: 172.17.123.141:9092,172.17.123.149:9092,172.17.123.152:9092  
+    template: 
+      default-topic: Orion_Schedule_Test
+      
+      
+##  mongodb的配置信息
+orion: 
+#  host: 172.17.123.204
+  host: 10.129.1.21
+  port: 27017
+  user: OrionUser
+  password: orionUser20170601
+  database: Orion
+  online: true
